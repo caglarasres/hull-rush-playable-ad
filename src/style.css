@@ -1,0 +1,21 @@
+@font-face { font-family: "Hull Display"; src: url('./assets/jersey25.woff2') format('woff2'); font-display: swap; }
+
+:root { font-family: "Hull Display", Impact, sans-serif; color: #fff; background: #02040b; }
+* { box-sizing: border-box; }
+html, body, #ad { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+body { background: #02040b; overscroll-behavior: none; touch-action: none; }
+#three-layer, #pixi-layer, #three-layer canvas, #pixi-layer canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+#pixi-layer canvas { touch-action: none; }
+#sound { position: fixed; z-index: 5; right: max(14px, env(safe-area-inset-right)); top: max(14px, env(safe-area-inset-top)); width: 40px; height: 40px; border: 1px solid #70f8ff66; border-radius: 50%; color: #c9fdff; background: #06131dcc; font: 800 22px inherit; box-shadow: 0 0 18px #00d5ff35; }
+#end-card { position: fixed; z-index: 10; inset: 0; display: flex; visibility: hidden; opacity: 0; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 24px; background: radial-gradient(circle at 50% 42%, #093d51d9 0, #02040bf2 52%, #000 100%); transition: opacity .35s; }
+#end-card.show { visibility: visible; opacity: 1; }
+.eyebrow { margin: 0 0 8px; color: #6ff8ff; font-size: clamp(15px, 4vw, 22px); letter-spacing: .26em; }
+h1 { margin: 0; color: #fff; font-size: clamp(76px, 25vw, 140px); font-style: italic; font-weight: 900; letter-spacing: -.06em; line-height: .7; filter: drop-shadow(0 0 24px #00d8ff88); }
+h1 span { color: #ff4f25; }
+#result { margin: 36px 0 20px; font-size: clamp(19px, 5vw, 27px); letter-spacing: .08em; }
+#cta { width: min(330px, 85vw); border: 0; border-radius: 8px; padding: 18px; color: #071116; background: linear-gradient(180deg, #f8ff8a, #ffb000); font: 900 clamp(25px, 7vw, 36px) inherit; font-style: italic; letter-spacing: .04em; box-shadow: 0 8px 0 #ad5700, 0 0 40px #ffad0066; animation: pulse 1.2s ease-in-out infinite alternate; }
+#replay { margin-top: 24px; border: 0; color: #b8d1d9; background: transparent; font: 800 16px inherit; letter-spacing: .12em; }
+#rotate { position: fixed; z-index: 20; inset: 0; display: none; flex-direction: column; align-items: center; justify-content: center; gap: 8px; background: #02040b; letter-spacing: .12em; }
+#rotate span { color: #7ca2ad; font-size: 14px; letter-spacing: .04em; }
+@media (orientation: landscape) and (max-height: 520px) { #rotate { display: flex; } }
+@keyframes pulse { to { transform: scale(1.045); box-shadow: 0 8px 0 #ad5700, 0 0 55px #ffc400aa; } }
